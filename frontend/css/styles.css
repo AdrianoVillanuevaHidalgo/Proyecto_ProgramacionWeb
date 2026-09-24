@@ -1,0 +1,9 @@
+.nav-color {
+    background: linear-gradient(to right,rgb(238, 207, 213), rgb(255, 129, 129));
+}
+.tipo-fuente {
+    font-family: system-ui, sans-serif;
+}
+.portada-color {
+    background: linear-gradient(to left, rgb(255, 246, 222),rgb(255, 221, 126));
+}

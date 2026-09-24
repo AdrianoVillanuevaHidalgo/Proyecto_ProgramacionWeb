@@ -1,196 +1,203 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Florería</title>
-  <style>
-    /* Estilos generales */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fffafc;
-      color: #333;
-    }
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    header {
-      background: #e91e63;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-sm navbar-light nav-color tipo-fuente border-bottom"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#">Ritmo De Detalles</a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-current="page"
+                  >Inicio
+                  <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Catalogo</a
+                >
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="dropdownId"
+                >
+                  <a class="dropdown-item" href="#"
+                    >Flores de tela</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >Flores de limpiapipas</a
+                  >
+                </div>
+              </li>
+            </ul>
+            <form class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2"
+                type="text"
+                placeholder="Buscar"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav> 
+    </header>
+    <main>
+      <section class="text-end py-5 portada-color border-bottom">
+        <div class="container py-5">
+          <h1 class="display-5 fw-light">sharphy</h1>
+          <p class="text-muted mb-4">sharphy</p>
+        </div>
+      </section>
 
-    nav {
-      margin-top: 10px;
-    }
+      <section id="items" class="container my-5">
+        <h2 class="text-center mb-4">Nuestros productos</h2>
+        
+        <div class="row row-cols-1 row-cols-md-4 g-4">
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="orquidea.jpg" class="card-img-top img-fija" alt="Orquideas">
+              <div class="card-body">
+                <h5 class="card-title">Orquideas</h5>
+                <p class="card-text">sharphy</p>
+                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem1">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+          </div>
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="rosas.jpg" class="card-img-top" alt="Rosas">
+              <div class="card-body">
+                <h5 class="card-title">Rosas</h5>
+                <p class="card-text">Rosas de tela compuesto de 5 flores</p>
+                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem2">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+          </div>
 
-    /* Sección productos */
-    .productos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 40px 20px;
-    }
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="tulipanes.jpg" class="card-img-top" alt="Tulipanes">
+              <div class="card-body">
+                <h5 class="card-title">Tulipanes</h5>
+                <p class="card-text">sharphy</p>
+                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem3">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img src="tulipanes.jpg" class="card-img-top img-fija" alt="Tulipanes">
+              <div class="card-body">
+                <h5 class="card-title">sharphy</h5>
+                <p class="card-text">sharphy</p>
+                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem3">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+          </div>                    
 
-    .producto {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin: 15px;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
+        </div>
 
-    .producto:hover {
-      transform: scale(1.05);
-    }
+      </section>
 
-    .producto img {
-      width: 100%;
-      border-radius: 8px 8px 0 0;
-    }
+      <div class="container-fluid my-4">
+        <div class="row">
 
-    .producto h3 {
-      margin: 10px 0;
-      color: #e91e63;
-    }
+          <aside class="col-lg-3 offcanvas-start bg-light border-end p-3">
 
-    .producto p {
-      padding: 0 10px;
-    }
+            <div class="offcanvas-header d-lg-none">
+              <h5 class="offcanvas-title" id="sidefilter">Filtros de busqueda</h5>
+              <button type="button" class="btn-close" data-bs-miss="offcanvas" data-bs-target="#sidebarFilter" aria-label="Close"></button>
+            </div>
 
-    /* Formulario de contacto */
-    .contacto {
-      background: #fce4ec;
-      padding: 40px 20px;
-      text-align: center;
-    }
+            <div class="offcanvas-body d-flex flex-column gap-4">
+              <h4 class="d-none d-lg-block mb-3">Filtros</h4>
 
-    .contacto h2 {
-      color: #e91e63;
-    }
+              <div class="filter-group">
+                <button class="btn btn-light w-100 text-start d-flex justify-content-between align-items-center fw-bold border-bottom pb-2"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#categoryfilter" aria-expanded="true">
+                  Categorias <span>▼</span>
+                </button>
+                <div class="collapse show mt-2" id="categoryfilter">
 
-    form {
-      max-width: 500px;
-      margin: auto;
-      text-align: left;
-    }
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cat1">
+                    <label class="form-check-label" for="cat1">Tela</label>
+                  </div>
 
-    label {
-      display: block;
-      margin: 10px 0 5px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-
-    button {
-      margin-top: 15px;
-      background: #e91e63;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-
-    button:hover {
-      background: #c2185b;
-    }
-
-    footer {
-      background: #e91e63;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Encabezado -->
-  <header>
-    <h1>Florería</h1>
-    <nav>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <!-- Sección de productos -->
-  <section id="productos" class="productos">
-    <div class="producto">
-      <img src="rosas.jpg" alt="Ramo de Rosas">
-      <h3>Ramo de Rosas</h3>
-      <p>Hermoso ramo de rosas rojas.</p>
-    </div>
-    <div class="producto">
-      <img src="tulipanes.jpg" alt="Tulipanes">
-      <h3>Tulipanes</h3>
-      <p>Coloridos tulipanes que alegran cualquiera.</p>
-    </div>
-    <div class="producto">
-      <img src="orquidea.jpg" alt="Orquídeas">
-      <h3>Orquídeas</h3>
-      <p>Elegantes orquídeas para un regalo.</p>
-    </div>
-  </section>
-
-  <!-- Formulario de contacto -->
-  <section id="contacto" class="contacto">
-    <h2>Contáctanos</h2>
-    <form id="formContacto">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
-
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" required>
-
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" rows="5" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <!-- al final de la pagina -->
-  <footer>
-    <p>&copy; 2026 Florería </p>
-  </footer>
-
-  
-  <script>
-    document.getElementById("formContacto").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("¡Gracias por contactarnos! Te responderemos pronto.");
-      this.reset();
-    });
-  </script>
-
-</body>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cat2">
+                    <label class="form-check-label" for="cat1">Limpiapipas</label>
+                  </div>    
+                                
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+
