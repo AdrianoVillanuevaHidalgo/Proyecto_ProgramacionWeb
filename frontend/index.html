@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florería</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fffafc;
+      color: #333;
+    }
+
+    header {
+      background: #e91e63;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sección productos */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .producto {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 15px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .producto h3 {
+      margin: 10px 0;
+      color: #e91e63;
+    }
+
+    .producto p {
+      padding: 0 10px;
+    }
+
+    /* Formulario de contacto */
+    .contacto {
+      background: #fce4ec;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      color: #e91e63;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background: #c2185b;
+    }
+
+    footer {
+      background: #e91e63;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Florería</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Sección de productos -->
+  <section id="productos" class="productos">
+    <div class="producto">
+      <img src="rosas.jpg" alt="Ramo de Rosas">
+      <h3>Ramo de Rosas</h3>
+      <p>Hermoso ramo de rosas rojas.</p>
+    </div>
+    <div class="producto">
+      <img src="tulipanes.jpg" alt="Tulipanes">
+      <h3>Tulipanes</h3>
+      <p>Coloridos tulipanes que alegran cualquiera.</p>
+    </div>
+    <div class="producto">
+      <img src="orquidea.jpg" alt="Orquídeas">
+      <h3>Orquídeas</h3>
+      <p>Elegantes orquídeas para un regalo.</p>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <form id="formContacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- al final de la pagina -->
+  <footer>
+    <p>&copy; 2026 Florería </p>
+  </footer>
+
+  
+  <script>
+    document.getElementById("formContacto").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("¡Gracias por contactarnos! Te responderemos pronto.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
