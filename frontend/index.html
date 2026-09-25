@@ -23,7 +23,7 @@
       >
         <div class="container">
           <a class="navbar-brand" href="#">
-          <img src="logo.jpg" alt="Logo" height="80" width="170"/>
+          <img src="img/logo.jpg" alt="Logo" height="80" width="170"/>
           </a>
           <!--Boton de navegacion para moviles-->
           <button 
@@ -66,6 +66,12 @@
                   <a class="dropdown-item" href="#"
                     >Flores de limpiapipas</a
                   >
+                  <a class="dropdown-item" href="#"
+                    >Peluches</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >Canastas</a
+                  >                  
                 </div>
               </li>
             </ul>
@@ -89,23 +95,75 @@
 
     <main>
       <!-- Sección de portada -->
-      <section class="text-end py-5 bg-light border-bottom">
-        <div class="container py-5">
-          <h1 class="display-5 fw-light">sharphy</h1>
-          <p class="text-muted mb-4">sharphy</p>
+      <section class="py-4">
+        <div class="container"> 
+
+          <div class="hero-card p-4 p-md-5 rounded-5 overflow-hidden position-relative">
+            <div class="row align-items-center">
+              
+              <div class="col-12 col-md-6 text-start z-1">
+                <h1 class="display-4 fw-bold text-dark mb-3">
+                  Bienvenido a <br><span class="hero-highlight">Ritmo de Detalles</span>
+                </h1>
+                <p class="lead text-muted mb-4">
+                  Arreglos florales hechos a mano con tela y limpiapipas para cada ocasión especial.
+                </p>
+
+              </div>
+
+              
+              <div class="col-12 col-md-6 text-center text-md-end mt-4 mt-md-0 position-relative">
+                <img src="img/portada.png" alt="Ramo de rosas de San Valentín" class="hero-img img-fluid">
+              </div>
+            </div>   
+          </div>       
         </div>
       </section>
 
+      <!-- Seccion de Franja de Beneficios-->
+      <section class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
+
+          <div clase="col">
+            <div class="card color-card border-0 shadow-sm p-3 d-flex flex-row align-items-center">
+                <img src="img/icon/icono_1.png" alt="Icono de entrega" class="me-3" style="width: 40px; height: 40px;">
+                <p class="fs-7 mb-0 me-3">Mismo dia delivery</p>
+            </div>
+          </div>
+
+          <div clase="col">
+            <div class="card color-card border-0 shadow-sm p-3 d-flex flex-row align-items-center">
+                <img src="img/icon/icono_2.png" alt="Icono de entrega" class="me-3" style="width: 40px; height: 40px;">
+                <p class="fs-7 mb-0 me-3">Arreglos de alta calidad</p>
+            </div>
+          </div>
+
+          <div clase="col">
+            <div class="card color-card border-0 shadow-sm p-3 d-flex flex-row align-items-center">
+                <img src="img/icon/icono_3.png" alt="Icono de entrega" class="me-3" style="width: 40px; height: 40px;">
+                <p class="fs-7 mb-0 me-3">Florista experta</p>
+            </div>
+          </div>
+
+          <div clase="col">
+            <div class="card color-card border-0 shadow-sm p-3 d-flex flex-row align-items-center">
+                <img src="img/icon/icono_4.png" alt="Icono de entrega" class="me-3" style="width: 40px; height: 40px;">
+                <p class="fs-7 mb-0 me-3">Felicidad Garantizada</p>
+            </div>
+          </div>          
+        </div>
+       </section>
+
       <!-- Sección de catalogo -->
-      <section id="items" class="container my-5">
-        <h2 class="text-center mb-4">Nuestros productos</h2>
+      <section class="container my-5">
+        <h2 class="text-start mb-4">Nuestros productos 🌸</h2>
         
-        <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
           
           <!-- Catalogo Flores de Cinta-->
           <div class="col">
             <div class="card h-60 shadow-sm">
-              <img src="cinta_cat.jpg" class="card-img-top img-fija" alt="Orquideas">
+              <img src="img/cinta_cat.jpg" class="card-img-top img-fija" alt="Orquideas">
               <div class="card-body">
                 <h5 class="card-title">Flores de cinta</h5>
 
@@ -121,7 +179,7 @@
           <!-- Catalogo Flores de Limpiapipas-->
           <div class="col">
             <div class="card h-60 shadow-sm">
-              <img src="chenil_cat.jpg" class="card-img-top" alt="Rosas">
+              <img src="img/chenil_cat.jpg" class="card-img-top" alt="Rosas">
               <div class="card-body">
                 <h5 class="card-title">Flores de Limpiapipas</h5>
 
@@ -137,7 +195,7 @@
           <!-- Catalogo Peluches-->
           <div class="col">
             <div class="card h-80 shadow-sm">
-              <img src="peluche_cat.jpg" class="card-img-top" alt="Tulipanes">
+              <img src="img/peluche_cat.jpg" class="card-img-top" alt="Tulipanes">
               <div class="card-body">
                 <h5 class="card-title">Peluches</h5>
                 <div class="d-flex justify-content-between align-items-center mt-2">
@@ -152,7 +210,7 @@
           <!-- Catalogo Canastas-->
           <div class="col">
             <div class="card h-100 shadow-sm">
-              <img src="canasta_cat.jpg" class="card-img-top img-fija" alt="Tulipanes">
+              <img src="img/canasta_cat.jpg" class="card-img-top img-fija" alt="Tulipanes">
               <div class="card-body">
                 <h5 class="card-title">Canastas</h5>
                 <div class="d-flex justify-content-between align-items-center mt-2">
@@ -169,46 +227,114 @@
 
       </section>
 
-      <div class="container-fluid my-4">
-        <div class="row">
-
-          <aside class="col-lg-3 offcanvas-start bg-light border-end p-3">
-
-            <div class="offcanvas-header d-lg-none">
-              <h5 class="offcanvas-title" id="sidefilter">Filtros de busqueda</h5>
-              <button type="button" class="btn-close" data-bs-miss="offcanvas" data-bs-target="#sidebarFilter" aria-label="Close"></button>
+      <!-- Sección de categoria ocasion -->
+       <section class="container py-5">
+        <h2 class="text-start mb-4">Por ocasión 🌸</h2>
+        
+        <div class="d-flex justify-content-between align-items-center flex-wrap g-3">
+          
+          <!-- Categoria cumpleaños -->
+          <div class="occasion-item text-center">
+            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+              <img src="img/icon/cake_icon.png" class="img-fluid occasion-img" alt="Cumpleaños">
             </div>
+            <span class="occasion-title text-uppercase fw-semibold">Cumpleaños</span>
+          </div>
 
-            <div class="offcanvas-body d-flex flex-column gap-4">
-              <h4 class="d-none d-lg-block mb-3">Filtros</h4>
-
-              <div class="filter-group">
-                <button class="btn btn-light w-100 text-start d-flex justify-content-between align-items-center fw-bold border-bottom pb-2"
-                  type="button" data-bs-toggle="collapse" data-bs-target="#categoryfilter" aria-expanded="true">
-                  Categorias <span>▼</span>
-                </button>
-                <div class="collapse show mt-2" id="categoryfilter">
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="cat1">
-                    <label class="form-check-label" for="cat1">Tela</label>
-                  </div>
-
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="cat2">
-                    <label class="form-check-label" for="cat1">Limpiapipas</label>
-                  </div>    
-                                
-                </div>
-              </div>
+          <!-- Categoria aniversario -->
+          <div class="occasion-item text-center">
+            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+              <img src="img/icon/anniversary_icon.png" class="img-fluid occasion-img" alt="Aniversario">
             </div>
-          </aside>
+            <span class="occasion-title text-uppercase fw-semibold">Aniversario</span>
+          </div>
+
+          <!-- Categoria Celebracion -->
+          <div class="occasion-item text-center">
+            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+              <img src="img/icon/celebration_icon.png" class="img-fluid occasion-img" alt="Celebraciones">
+            </div>
+            <span class="occasion-title text-uppercase fw-semibold">Celebraciones</span>
+          </div>
+
+          <!-- Categoria Gratitud -->
+          <div class="occasion-item text-center">
+            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+              <img src="img/icon/gratitude_icon.png" class="img-fluid occasion-img" alt="Gratitud">
+            </div>
+            <span class="occasion-title text-uppercase fw-semibold">Gratitud</span>
+          </div>      
+          
+          <!-- Categoria Simpatia -->
+          <div class="occasion-item text-center">
+            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+              <img src="img/icon/sympathy_icon.png" class="img-fluid occasion-img" alt="Simpatía">
+            </div>
+            <span class="occasion-title text-uppercase fw-semibold">Simpatía</span>
+          </div> 
+
+          <!-- Categoria Recien nacido -->
+          <div class="occasion-item text-center">
+            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+              <img src="img/icon/baby_icon.png" class="img-fluid occasion-img" alt="Recién nacido">
+            </div>
+            <span class="occasion-title text-uppercase fw-semibold">Recién nacido</span>
+          </div>           
+        </div>
+       </section>
+
+    </main>
+    <footer class="custom-footer py-4">
+      <div class="container">
+        <div class="row g-4">
+
+          <!--Información-->
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold mb-3">🌸RitmoDeDetalles</h5>
+            <p class="small text-secondary mb-3">
+              Confección y comercialización de arreglos florales artesanales elaborados a mano con tela y limpiapipas en San
+              Martín de Porres, Lima.
+            </p>
+            <span class="badge bg-danger text-white p-2 small">
+              ⚠️ Entorno Académico de Prueba
+            </span>
+          </div>
+
+          <!-- Navegación Rápida -->
+          <div class="col-6 col-md-4">
+            <h5 class="fw-bold mb-3">Navegación</h5>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><a href="#catalogo" class="text-secondary text-decoration-none hover-link">Catálogo de
+                  Ramos</a></li>
+              <li class="mb-2"><a href="#panel-admin" class="text-secondary text-decoration-none hover-link">Panel
+                  Administrador</a></li>
+            </ul>
+          </div>
+
+          <!-- Contacto y Ubicación -->
+          <div class="col-6 col-md-4">
+            <h5 class="fw-bold mb-3">Atención & Contacto</h5>
+            <ul class="list-unstyled small text-secondary">
+              <li class="mb-2">📍 San Martín de Porres, Lima - Perú</li>
+              <li class="mb-2">📱 Pedidos: +51 987 654 321</li>
+              <li class="mb-2">🕒 Horario: Lun - Sáb: 10:00 AM - 7:00 PM</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <hr class="border-secondary my-2">
+
+        <!-- Copyright y Privacidad (Ley N.° 29733) -->
+        <div class="row align-items-center small text-secondary text-center text-md-start">
+          <div class="col-md-6 mb-2 mb-md-0">
+            &copy; 2026 RitmoDeDetalles. Todos los derechos reservados.
+          </div>
+          <div class="col-md-6 text-md-end extra-small">
+            <span>Ley N.° 29733: Uso exclusivo de datos ficticios/anonimizados</span>
+          </div>
         </div>
       </div>
-      
-    </main>
-    <footer>
-      <!-- place footer here -->
     </footer>
     <!-- Bootstrap JavaScript Bundle (includes Popper) -->
     <script
