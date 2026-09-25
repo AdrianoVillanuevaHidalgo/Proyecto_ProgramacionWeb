@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Catálogo - Floristeria</title>
+        <!-- Bootstrap CSS v5.3.8 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <header>
+        <!-- Barra de navegación -->
+        <nav
+            class="navbar navbar-expand-sm navbar-light bg-light tipo-fuente border-bottom"
+        >
+            <div class="container">
+            <a class="navbar-brand" href="index.html">
+            <img src="img/logo.jpg" alt="Logo" height="80" width="170"/>
+            </a>
+            <!--Boton de navegacion para moviles-->
+            <button 
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html" aria-current="page"
+                    >Inicio
+                    <span class="visually-hidden">(current)</span></a
+                    >
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                    class="nav-link dropdown-toggle"
+                    href="catalogo.html"
+                    id="dropdownId"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Catalogo</a
+                    >
+                    <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownId"
+                    >
+                    <a class="dropdown-item" href="catalogo.html?categoria=cinta"
+                        >Flores de cinta</a
+                    >
+                    <a class="dropdown-item" href="catalogo.html?categoria=limpiapipas"
+                        >Flores de limpiapipas</a
+                    >
+                    <a class="dropdown-item" href="catalogo.html?categoria=peluches"
+                        >Peluches</a
+                    >
+                    <a class="dropdown-item" href="catalogo.html?categoria=canastas"
+                        >Canastas</a
+                    >                  
+                    </div>
+                </li>
+                </ul>
+                <form class="d-flex my-2 my-lg-0" action="catalogo.html" method="get">
+                <input
+                    class="form-control me-sm-2"
+                    type="text"
+                    placeholder="Buscar"
+                    name="buscar"
+                    aria-label="Buscar"
+                />
+                <button
+                    class="btn btn-outline-success my-2 my-sm-0"
+                    type="submit"
+                >
+                    Buscar
+                </button>
+                </form>
+            </div>
+            </div>
+        </nav> 
+        </header>
+
+        <main class="container my-4">
+            <div class="row">
+                <!-- Columna de filtros -->
+                <aside class="col-lg-3 col-md-4 mb-4">
+                    <div class="card p-3 shadow-sm border-0 bg-light">
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="fw-bold m-0">FILTROS</h5>
+                            <button type="button" class="btn btn-sm btn-link text-decoration-none p-0 text-muted" id="btnResetFiltros">
+                                Limpiar
+                            </button>
+                        </div>
+
+                        <!-- Filtro por categoría -->
+                        <div class="filter-group mb-4 border-bottom pb-3">
+                            <h6 class="fw-bold text-uppercase fs-7 text-secondary">Categoría</h6>
+
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="cinta" id="catCinta">
+                                <label class="form-check-label" for="catCinta">Flores de cinta</label>
+                            </div>
+
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="limpiapipas" id="catLimpiapipas">
+                                <label class="form-check-label" for="catLimpiapipas">Flores de limpiapipas</label>
+                            </div>
+
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="peluches" id="catPeluches">
+                                <label class="form-check-label" for="catPeluches">Peluches</label>
+                            </div>
+
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="canastas" id="catCanastas">
+                                <label class="form-check-label" for="catCanastas">Canastas</label>
+                            </div> 
+
+                         </div>
+
+                        <!-- Filtro por Ocasión -->
+                        <div class="filter-group mb-4 border-bottom pb-3">
+                            <h6 class="fw-bold text-uppercase fs-7 text-secondary">Por Ocasión</h6>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" id="ocasionCumple" value="cumpleanos">
+                                <label class="form-check-label" for="ocasionCumple">Cumpleaños</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" id="ocasionAniversario" value="aniversario">
+                                <label class="form-check-label" for="ocasionAniversario">Aniversario</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" id="ocasionCelebraciones" value="celebraciones">
+                                <label class="form-check-label" for="ocasionCelebraciones">Celebraciones</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" id="ocasionGratitud" value="gratitud">
+                                <label class="form-check-label" for="ocasionGratitud">Gratitud</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" id="ocasionSimpatia" value="simpatia">
+                                <label class="form-check-label" for="ocasionSimpatia">Simpatía</label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" id="ocasionRecienNacido" value="recien-nacido">
+                                <label class="form-check-label" for="ocasionRecienNacido">Recién nacido</label>
+                            </div>
+                        </div>    
+
+                        <!-- Filtro por Rango de Precio -->
+                        <div class="filter-group mb-4">
+                            <h6 class="fw-bold text-uppercase fs-7 text-secondary mb-2">Rango de Precio</h6>
+                            <label for="rangePrecio" class="form-label fs-7">Precio Máximo: <strong id="precioValor">S/ 100</strong></label>
+                            <input type="range" class="form-range" id="rangePrecio" min="10" max="150" step="5" value="100">
+                            <div class="d-flex justify-content-between fs-7 text-muted">
+                                <span>S/ 10</span>
+                                <span>S/ 150</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </aside>
+
+                <section class="col-lg-9 col-md-8">
+
+                    <!-- Barra Superior de Conteo y Ordenamiento -->
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                        <p class="m-0 text-muted" id="contadorResultados">Cargando productos...</p>
+
+                        <div class="d-flex align-items-center gap-2 mt-2 mt-sm-0">
+                            <label for="selectOrden" class="form-label m-0 fs-7 text-nowrap">ORDENAR POR:</label>
+                            <select class="form-select form-select-sm" id="selectOrden" aria-label="Ordenar productos">
+                                <option value="relevancia" selected>Relevancia</option>
+                                <option value="precio-asc">Precio: Menor a Mayor</option>
+                                <option value="precio-desc">Precio: Mayor a Menor</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Contenedor donde JavaScript agregara dinamicamente las tarjetas del inventario -->
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-4" id="contenedorProductos">
+                        
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

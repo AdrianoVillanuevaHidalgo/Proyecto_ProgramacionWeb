@@ -100,3 +100,21 @@
   background-color: rgb(255, 226, 208);
   color: rgb(108, 108, 108);
 }
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.button-color {
+  background-color: #d63384;
+  border-color: #d63384;
+}
+
+.button-color:hover {
+  background-color: #b8256f;
+  border-color: #b8256f;
+}
+@media (max-width: 767.98px) {
+  aside {
+    margin-bottom: 2rem;
+  }
+}

@@ -18,11 +18,12 @@
 
   <body>
     <header>
+      <!-- Barra de navegación -->
       <nav
         class="navbar navbar-expand-sm navbar-light bg-light tipo-fuente border-bottom"
       >
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
           <img src="img/logo.jpg" alt="Logo" height="80" width="170"/>
           </a>
           <!--Boton de navegacion para moviles-->
@@ -41,7 +42,7 @@
           <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="#" aria-current="page"
+                <a class="nav-link active" href="index.html" aria-current="page"
                   >Inicio
                   <span class="visually-hidden">(current)</span></a
                 >
@@ -49,7 +50,7 @@
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="catalogo.html"
                   id="dropdownId"
                   data-bs-toggle="dropdown"
                   aria-haspopup="true"
@@ -60,26 +61,28 @@
                   class="dropdown-menu"
                   aria-labelledby="dropdownId"
                 >
-                  <a class="dropdown-item" href="#"
-                    >Flores de tela</a
+                  <a class="dropdown-item" href="catalogo.html?categoria=cinta"
+                    >Flores de cinta</a
                   >
-                  <a class="dropdown-item" href="#"
+                  <a class="dropdown-item" href="catalogo.html?categoria=limpiapipas"
                     >Flores de limpiapipas</a
                   >
-                  <a class="dropdown-item" href="#"
+                  <a class="dropdown-item" href="catalogo.html?categoria=peluches"
                     >Peluches</a
                   >
-                  <a class="dropdown-item" href="#"
+                  <a class="dropdown-item" href="catalogo.html?categoria=canastas"
                     >Canastas</a
                   >                  
                 </div>
               </li>
             </ul>
-            <form class="d-flex my-2 my-lg-0">
+            <form class="d-flex my-2 my-lg-0" action="catalogo.html" method="get">
               <input
                 class="form-control me-sm-2"
                 type="text"
                 placeholder="Buscar"
+                name="buscar"
+                aria-label="Buscar"
               />
               <button
                 class="btn btn-outline-success my-2 my-sm-0"
@@ -165,11 +168,11 @@
             <div class="card h-60 shadow-sm">
               <img src="img/cinta_cat.jpg" class="card-img-top img-fija" alt="Orquideas">
               <div class="card-body">
-                <h5 class="card-title">Flores de cinta</h5>
+                <h5 class="card-title">Flores de Cinta</h5>
 
                 <div class="d-flex justify-content-between align-items-center mt-2">
                   <p class="card-text">Desde S/25 soles</p>
-                  <a href="#" class="btn shadow-sm button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                  <a href="catalogo.html?categoria=cinta" class="btn shadow-sm button-color rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="Ver flores de cinta" style="width: 40px; height: 40px; margin-top: -45px;">
                     <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
                   </a>
                 </div>
@@ -185,7 +188,7 @@
 
                 <div class="d-flex justify-content-between align-items-center mt-2">
                 <p class="card-text">Desde S/6 soles</p> 
-                <a href="#" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                <a href="catalogo.html?categoria=limpiapipas" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="Ver flores de limpiapipas" style="width: 40px; height: 40px; margin-top: -45px;">
                   <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
                 </a>
                 </div>
@@ -200,7 +203,7 @@
                 <h5 class="card-title">Peluches</h5>
                 <div class="d-flex justify-content-between align-items-center mt-2">
                 <p class="card-text">Desde S/20 soles</p> 
-                <a href="#" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                <a href="catalogo.html?categoria=peluches" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="Ver peluches" style="width: 40px; height: 40px; margin-top: -45px;">
                   <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
                 </a>
                 </div>
@@ -215,7 +218,7 @@
                 <h5 class="card-title">Canastas</h5>
                 <div class="d-flex justify-content-between align-items-center mt-2">
                 <p class="card-text">Desde S/45 soles</p> 
-                <a href="#" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                <a href="catalogo.html?categoria=canastas" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" aria-label="Ver canastas" style="width: 40px; height: 40px; margin-top: -45px;">
                   <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
                 </a>
                 </div>
@@ -234,52 +237,61 @@
         <div class="d-flex justify-content-between align-items-center flex-wrap g-3">
           
           <!-- Categoria cumpleaños -->
-          <div class="occasion-item text-center">
-            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
-              <img src="img/icon/cake_icon.png" class="img-fluid occasion-img" alt="Cumpleaños">
+           <a href="catalogo.html?ocasion=cumpleanos" class="text-decoration-none text-dark">
+            <div class="occasion-item text-center">
+              <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+                <img src="img/icon/cake_icon.png" class="img-fluid occasion-img" alt="Cumpleaños">
+              </div>
+              <span class="occasion-title text-uppercase fw-semibold">Cumpleaños</span>
             </div>
-            <span class="occasion-title text-uppercase fw-semibold">Cumpleaños</span>
-          </div>
-
+          </a>
           <!-- Categoria aniversario -->
-          <div class="occasion-item text-center">
-            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
-              <img src="img/icon/anniversary_icon.png" class="img-fluid occasion-img" alt="Aniversario">
+          <a href="catalogo.html?ocasion=aniversario" class="text-decoration-none text-dark">
+            <div class="occasion-item text-center">
+              <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+                <img src="img/icon/anniversary_icon.png" class="img-fluid occasion-img" alt="Aniversario">
+              </div>
+              <span class="occasion-title text-uppercase fw-semibold">Aniversario</span>
             </div>
-            <span class="occasion-title text-uppercase fw-semibold">Aniversario</span>
-          </div>
+          </a>
 
           <!-- Categoria Celebracion -->
-          <div class="occasion-item text-center">
-            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
-              <img src="img/icon/celebration_icon.png" class="img-fluid occasion-img" alt="Celebraciones">
+          <a href="catalogo.html?ocasion=celebraciones" class="text-decoration-none text-dark">
+            <div class="occasion-item text-center">
+              <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+                <img src="img/icon/celebration_icon.png" class="img-fluid occasion-img" alt="Celebraciones">
+              </div>
+              <span class="occasion-title text-uppercase fw-semibold">Celebraciones</span>
             </div>
-            <span class="occasion-title text-uppercase fw-semibold">Celebraciones</span>
-          </div>
+          </a>
 
           <!-- Categoria Gratitud -->
-          <div class="occasion-item text-center">
-            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
-              <img src="img/icon/gratitude_icon.png" class="img-fluid occasion-img" alt="Gratitud">
+          <a href="catalogo.html?ocasion=gratitud" class="text-decoration-none text-dark">
+            <div class="occasion-item text-center">
+              <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+                <img src="img/icon/gratitude_icon.png" class="img-fluid occasion-img" alt="Gratitud">
             </div>
             <span class="occasion-title text-uppercase fw-semibold">Gratitud</span>
           </div>      
           
           <!-- Categoria Simpatia -->
-          <div class="occasion-item text-center">
-            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
-              <img src="img/icon/sympathy_icon.png" class="img-fluid occasion-img" alt="Simpatía">
-            </div>
-            <span class="occasion-title text-uppercase fw-semibold">Simpatía</span>
+          <a href="catalogo.html?ocasion=simpatia" class="text-decoration-none text-dark">
+            <div class="occasion-item text-center">
+              <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+                <img src="img/icon/sympathy_icon.png" class="img-fluid occasion-img" alt="Simpatía">
+              </div>
+              <span class="occasion-title text-uppercase fw-semibold">Simpatía</span>
           </div> 
 
           <!-- Categoria Recien nacido -->
-          <div class="occasion-item text-center">
-            <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
-              <img src="img/icon/baby_icon.png" class="img-fluid occasion-img" alt="Recién nacido">
+          <a href="catalogo.html?ocasion=recien-nacido" class="text-decoration-none text-dark">
+            <div class="occasion-item text-center">
+              <div class="circle-icon mx-auto mb-2 d-flex align-items-center justify-content-center">
+                <img src="img/icon/baby_icon.png" class="img-fluid occasion-img" alt="Recién nacido">
+              </div>
+              <span class="occasion-title text-uppercase fw-semibold">Recién nacido</span>
             </div>
-            <span class="occasion-title text-uppercase fw-semibold">Recién nacido</span>
-          </div>           
+          </a>
         </div>
        </section>
 
@@ -304,7 +316,7 @@
           <div class="col-6 col-md-4">
             <h5 class="fw-bold mb-3">Navegación</h5>
             <ul class="list-unstyled small">
-              <li class="mb-2"><a href="#catalogo" class="text-secondary text-decoration-none hover-link">Catálogo de
+              <li class="mb-2"><a href="catalogo.html" class="text-secondary text-decoration-none hover-link">Catálogo de
                   Ramos</a></li>
               <li class="mb-2"><a href="#panel-admin" class="text-secondary text-decoration-none hover-link">Panel
                   Administrador</a></li>
