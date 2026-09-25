@@ -19,11 +19,14 @@
   <body>
     <header>
       <nav
-        class="navbar navbar-expand-sm navbar-light nav-color tipo-fuente border-bottom"
+        class="navbar navbar-expand-sm navbar-light bg-light tipo-fuente border-bottom"
       >
         <div class="container">
-          <a class="navbar-brand" href="#">Ritmo De Detalles</a>
-          <button
+          <a class="navbar-brand" href="#">
+          <img src="logo.jpg" alt="Logo" height="80" width="170"/>
+          </a>
+          <!--Boton de navegacion para moviles-->
+          <button 
             class="navbar-toggler d-lg-none"
             type="button"
             data-bs-toggle="collapse"
@@ -34,6 +37,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
               <li class="nav-item">
@@ -82,67 +86,81 @@
         </div>
       </nav> 
     </header>
+
     <main>
-      <section class="text-end py-5 portada-color border-bottom">
+      <!-- Sección de portada -->
+      <section class="text-end py-5 bg-light border-bottom">
         <div class="container py-5">
           <h1 class="display-5 fw-light">sharphy</h1>
           <p class="text-muted mb-4">sharphy</p>
         </div>
       </section>
 
+      <!-- Sección de catalogo -->
       <section id="items" class="container my-5">
         <h2 class="text-center mb-4">Nuestros productos</h2>
         
         <div class="row row-cols-1 row-cols-md-4 g-4">
-
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="orquidea.jpg" class="card-img-top img-fija" alt="Orquideas">
-              <div class="card-body">
-                <h5 class="card-title">Orquideas</h5>
-                <p class="card-text">sharphy</p>
-                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem1">
-                  Añadir al carrito
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="rosas.jpg" class="card-img-top" alt="Rosas">
-              <div class="card-body">
-                <h5 class="card-title">Rosas</h5>
-                <p class="card-text">Rosas de tela compuesto de 5 flores</p>
-                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem2">
-                  Añadir al carrito
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <img src="tulipanes.jpg" class="card-img-top" alt="Tulipanes">
-              <div class="card-body">
-                <h5 class="card-title">Tulipanes</h5>
-                <p class="card-text">sharphy</p>
-                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem3">
-                  Añadir al carrito
-                </button>
-              </div>
-            </div>
-          </div>
           
+          <!-- Catalogo Flores de Cinta-->
+          <div class="col">
+            <div class="card h-60 shadow-sm">
+              <img src="cinta_cat.jpg" class="card-img-top img-fija" alt="Orquideas">
+              <div class="card-body">
+                <h5 class="card-title">Flores de cinta</h5>
+
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <p class="card-text">Desde S/25 soles</p>
+                  <a href="#" class="btn shadow-sm button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                    <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Catalogo Flores de Limpiapipas-->
+          <div class="col">
+            <div class="card h-60 shadow-sm">
+              <img src="chenil_cat.jpg" class="card-img-top" alt="Rosas">
+              <div class="card-body">
+                <h5 class="card-title">Flores de Limpiapipas</h5>
+
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                <p class="card-text">Desde S/6 soles</p> 
+                <a href="#" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                  <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Catalogo Peluches-->
+          <div class="col">
+            <div class="card h-80 shadow-sm">
+              <img src="peluche_cat.jpg" class="card-img-top" alt="Tulipanes">
+              <div class="card-body">
+                <h5 class="card-title">Peluches</h5>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                <p class="card-text">Desde S/20 soles</p> 
+                <a href="#" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                  <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Catalogo Canastas-->
           <div class="col">
             <div class="card h-100 shadow-sm">
-              <img src="tulipanes.jpg" class="card-img-top img-fija" alt="Tulipanes">
+              <img src="canasta_cat.jpg" class="card-img-top img-fija" alt="Tulipanes">
               <div class="card-body">
-                <h5 class="card-title">sharphy</h5>
-                <p class="card-text">sharphy</p>
-                <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalItem3">
-                  Añadir al carrito
-                </button>
+                <h5 class="card-title">Canastas</h5>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                <p class="card-text">Desde S/45 soles</p> 
+                <a href="#" class="btn button-color rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px; margin-top: -45px;">
+                  <span class="fs-2 text-white" style="transform: translateY(-3px); display: inline-block;">&rarr;</span>
+                </a>
+                </div>
               </div>
             </div>
           </div>                    

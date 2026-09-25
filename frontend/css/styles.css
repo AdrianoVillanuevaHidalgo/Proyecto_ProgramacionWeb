@@ -1,9 +1,19 @@
-.nav-color {
-    background: linear-gradient(to right,rgb(238, 207, 213), rgb(255, 129, 129));
-}
 .tipo-fuente {
     font-family: system-ui, sans-serif;
 }
 .portada-color {
     background: linear-gradient(to left, rgb(255, 246, 222),rgb(255, 221, 126));
+}
+.button-color {
+    background-color: rgb(255, 164, 182);
+    border-color: rgb(255, 164, 182);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+.button-color:hover {
+  background-color: #d63384; 
+  border-color: #d63384;
+  color: #ffffff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(-2px); 
 }
