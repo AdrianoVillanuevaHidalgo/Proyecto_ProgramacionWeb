@@ -16,6 +16,7 @@ El sistema permite a los usuarios consultar un catálogo dinámico de arreglos f
 
 ## 📁 Estructura del Proyecto
 
+```text
 proyecto-integrador/
 ├── docs/
 │   ├── [1.1]_toma_requerimientos.pdf
@@ -43,7 +44,7 @@ proyecto-integrador/
 │   └── package.json
 ├── [1.6]_reflexion_curricular.pdf
 └── README.md
-
+```
 ---
 
 ## 🚀 Instrucciones de Instalación y Ejecución Local
@@ -55,15 +56,15 @@ Tener instalado **Node.js** (versión 16.x o superior) y **npm** en la computado
 
 ### 2. Instalación de Dependencias
 Abre la terminal de comandos, navega hasta la carpeta del backend e instala las dependencias:
-
+```bash
 cd backend
 npm install
-
+```
 ### 3. Iniciar el Servidor
 Ejecuta el comando para arrancar el servidor web de Express:
-
+```bash
 npm start
-
+```
 ### 4. Acceso en el Navegador
 Abre cualquier navegador web e ingresa a la siguiente URL:
 👉 **http://localhost:3000**
@@ -86,6 +87,7 @@ Para acceder al Panel de Administración (http://localhost:3000/login.html):
 * **GET /api/pedidos**
   * **Descripción:** Obtiene la lista completa de pedidos registrados en pedidos.json.
   * **Respuesta (200 OK):**
+```json
     [
       {
         "idPedido": 1791541496248,
@@ -108,10 +110,11 @@ Para acceder al Panel de Administración (http://localhost:3000/login.html):
         "fechaRegistro": "2026-10-09T10:24:56.248Z"
       }
     ]
-
+```
 * **POST /api/pedidos**
   * **Descripción:** Registra un nuevo pedido.
   * **Ejemplo de Cuerpo de la Solicitud (JSON):**
+```json
     {
       "cliente": "María García",
       "telefono": "987654321",
@@ -129,6 +132,7 @@ Para acceder al Panel de Administración (http://localhost:3000/login.html):
       ],
       "total": "S/ 25.00"
     }
+```    
   * **Respuestas HTTP:**
     * **201 Created**: Pedido registrado exitosamente.
     * **400 Bad Request**: Solicitud incompleta o faltan campos obligatorios.
@@ -149,6 +153,7 @@ Para acceder al Panel de Administración (http://localhost:3000/login.html):
 * **POST /api/productos**
   * **Descripción:** Agrega un nuevo producto desde el panel administrativo.
   * **Ejemplo de Cuerpo de la Solicitud (JSON):**
+```json  
     {
       "nombre": "Girasoles",
       "categoria": ["cinta"],
@@ -157,6 +162,7 @@ Para acceder al Panel de Administración (http://localhost:3000/login.html):
       "descripcion": "Arreglo brillante de girasoles.",
       "imagen": "data:image/jpeg;base64,..."
     }
+```
 
 * **DELETE /api/productos/:id**
   * **Descripción:** Elimina un producto del catálogo por su ID.
