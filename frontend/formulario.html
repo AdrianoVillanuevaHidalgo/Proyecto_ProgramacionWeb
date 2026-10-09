@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritmo de Detalles - Registro de Pedido</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+      <!-- Bootstrap CSS v5.3.8 -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+      />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="bg-light">
+
+    <header class="bg-white shadow-sm py-3 mb-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img src="img/logo.jpg" alt="Logo de Ritmo de Detalles" height="80" width="170"/>
+        <a href="catalogo.html" class="btn btn-outline-secondary btn-sm">&larr; Volver al catálogo</a>
+      </div>
+    </header>
+
+    <main class="container my-4">
+      <div class="row g-4">
+        
+  <!-- COLUMNA IZQUIERDA: CARRITO Y RESUMEN DE LA SOLICITUD -->
+        <section class="col-lg-5">
+          <div class="card border-0 shadow-sm p-4 sticky-top" style="top: 20px;">
+            <h2 class="h5 fw-bold mb-3 text-secondary">Resumen de la Solicitud</h2>
+            <hr>
+            
+            <!-- CONTENEDOR DINÁMICO DEL CARRITO (Aquí JS inyectará los productos elegidos) -->
+            <div id="contenedor-carrito-items">
+              
+              <!-- EJEMPLO DE LA ESTRUCTURA VISUAL DE 1 ELEMENTO DEL CARRITO -->
+              <div class="card mb-3 border-light shadow-sm p-2">
+                <div class="row g-2 align-items-center">
+                  
+                  <!-- Imagen del Producto -->
+                  <div class="col-3">
+                    <img src="https://via.placeholder.com/80" alt="Producto Seleccionado" class="img-fluid rounded" style="object-fit: cover; height: 70px;">
+                  </div>
+                  
+                  <!-- Info basica -->
+                  <div class="col-9">
+                    <div class="d-flex justify-content-between align-items-start">
+                      <h3 class="h6 fw-bold mb-1 text-truncate" style="max-width: 140px;">Ramo Elegante de Rosas</h3>
+                      <span class="fw-bold text-success small">S/ 120.00</span>
+                    </div>
+
+                    <!-- Controles -->
+                    <div class="d-flex align-items-center justify-content-between mt-2 gap-2">
+                      
+                      <!-- Seleccionar el color -->
+                      <div>
+                        <label for="color-select-1" class="visually-hidden">Color</label>
+                        <select id="color-select-1" class="form-select form-select-sm" style="font-size: 0.75rem;">
+                          <option value="Rojo">Color: Rojo</option>
+                          <option value="Rosa">Color: Rosa</option>
+                          <option value="Azul">Color: Azul</option>
+                          <option value="Amarillo">Color: Amarillo</option>
+                        </select>
+                      </div>
+
+                      <!-- Controles Aumentar / Disminuir cantidad -->
+                      <div class="input-group input-group-sm" style="width: 90px;">
+                        <button class="btn btn-outline-secondary px-2" type="button" aria-label="Disminuir cantidad">-</button>
+                        <span class="form-control text-center px-1 bg-white fw-bold">1</span>
+                        <button class="btn btn-outline-secondary px-2" type="button" aria-label="Aumentar cantidad">+</button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <hr>
+            <!-- Total estimado acumulado de los productos seleccionados -->
+            <div class="d-flex justify-content-between align-items-center fw-bold fs-5 mb-2">
+              <span>Total:</span>
+              <span id="carrito-total-precio" class="text-success">S/ 120.00</span>
+            </div>
+
+            <p class="text-muted small mb-0">
+              * Tus datos seran procesados unicamente para coordinar la entrega y la personalizacion de la tarjeta dedicatoria.
+            </p>
+          </div>
+        </section>
+
+        <!-- COLUMNA DERECHA: Formulario de registro de pedido -->
+        <section class="col-lg-7">
+          <div class="card border-0 shadow-sm p-4">
+            <h2 class="h4 fw-bold mb-3 text-dark">Datos de Envio</h2>
+            <p class="text-muted small mb-4">Completa el formulario para reservar tu pedido. No requerimos pago con tarjeta en la web.</p>
+
+            <!-- Formulario principal con JS -->
+            <form id="form-pedido" novalidate>
+              
+              <!-- Campo: Nombre -->
+              <div class="mb-3">
+                <label for="nombre" class="form-label fw-semibold">Nombre completo <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Quispe" required>
+                <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+              </div>
+
+              <!-- Campo: Telefono -->
+              <div class="mb-3">
+                <label for="telefono" class="form-label fw-semibold">Telefono de contacto <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Ej. 987654321" pattern="[0-9]{9}" required>
+                <div class="invalid-feedback">Ingresa un numero de telefono valido.</div>
+              </div>
+
+              <!-- Campo: Fecha de entrega -->
+              <div class="mb-3">
+                <label for="fecha-entrega" class="form-label fw-semibold">Fecha de entrega deseada <span class="text-danger">*</span></label>
+                <input type="date" class="form-control" id="fecha-entrega" required>
+                <div class="invalid-feedback">Por favor, selecciona una fecha valida.</div>
+              </div>
+
+              <!-- Campo: Direccion de entrega -->
+              <div class="mb-3">
+                <label for="direccion" class="form-label fw-semibold">Direccion exacta de entrega <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="direccion" placeholder="Ej. Av. Peru 1234, San Martín de Porres" required>
+                <div class="invalid-feedback">Proporciona la direccion de entrega.</div>
+              </div>
+
+              <!-- Campo: Mensaje dedicatorio -->
+              <div class="mb-3">
+                <label for="mensaje" class="form-label fw-semibold">Mensaje para la dedicatoria <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="mensaje" rows="3" placeholder="Escribe el texto que irá en la tarjeta del regalo..." required></textarea>
+                <div class="invalid-feedback">Escribe un mensaje para la tarjeta.</div>
+              </div>
+
+              <!-- Checkbox de politicas de privacidad-->
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="privacidad" required>
+                <label class="form-check-label small text-muted" for="privacidad">
+                  Acepto el tratamiento de mis datos personales ficticios unicamente para fines de simulacion de entrega (Ley N.° 29733). <span class="text-danger">*</span>
+                </label>
+                <div class="invalid-feedback">Debes aceptar la clausula de privacidad.</div>
+              </div>
+
+              <!-- Contenedor para alertas o retroalimentacion -->
+              <div id="mensaje-feedback" class="mb-3 d-none"></div>
+
+              <!-- Boton de Envio -->
+              <button type="submit" id="btn-enviar" class="btn btn-success w-100 py-2 fw-bold">
+                Confirmar Reserva de Pedido
+              </button>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

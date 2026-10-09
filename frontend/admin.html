@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrativo - Ritmo de Detalles</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="bg-light">
+
+    <header class="bg-white shadow-sm py-3 mb-4">
+        <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-3">
+            <img src="img/logo.jpg" alt="Logo de Ritmo de Detalles" height="60" width="130">
+            <span class="badge bg-danger fs-6">Panel Admin</span>
+        </div>
+        <div>
+            <a href="index.html" class="btn btn-outline-secondary btn-sm me-2" target="_blank">Ver Tienda</a>
+            <button id="btn-logout" class="btn btn-outline-danger btn-sm fw-bold">Cerrar Sesion</button>
+        </div>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        
+        <!-- Pestañas de navegacion -->
+        <ul class="nav nav-pills mb-4" id="adminTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active fw-bold" id="pedidos-tab" data-bs-toggle="tab" data-bs-target="#tab-pedidos" type="button" role="tab" aria-controls="tab-pedidos" aria-selected="true">
+            Solicitudes de Pedidos
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-bold" id="inventario-tab" data-bs-toggle="tab" data-bs-target="#tab-inventario" type="button" role="tab" aria-controls="tab-inventario" aria-selected="false">
+            Gestion de Productos
+            </button>
+        </li>
+        </ul>
+
+        <div class="tab-content" id="adminTabsContent">
+        
+        <!-- Seccion de pedidos registrados -->
+        <section class="tab-pane fade show active" id="tab-pedidos" role="tabpanel" aria-labelledby="pedidos-tab">
+            <div class="card border-0 shadow-sm p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h5 fw-bold m-0 text-secondary">Lista de Pedidos Recibidos</h2>
+                <button id="btn-refrescar-pedidos" class="btn btn-sm btn-outline-success">Actualizar Lista</button>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table table-hover align-middle" id="tabla-pedidos">
+                <thead class="table-light">
+                    <tr>
+                    <th>ID</th>
+                    <th>Cliente / Telefono</th>
+                    <th>Fecha Entrega</th>
+                    <th>Detalle del Pedido</th>
+                    <th>Dedicatoria</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-pedidos">
+                    <!-- JS inyectara las filas de pedidos aqui -->
+                    <tr>
+                    <td colspan="8" class="text-center text-muted py-4">Cargando pedidos...</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            </div>
+        </section>
+
+        <!--  Seccion de gestion de productos -->
+        <section class="tab-pane fade" id="tab-inventario" role="tabpanel" aria-labelledby="inventario-tab">
+            <div class="row g-4">
+            
+            <!-- Formulario de nuevo producto -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm p-4">
+                <h2 class="h5 fw-bold mb-3 text-secondary" id="titulo-form-producto">Agregar Nuevo Producto</h2>
+                
+                <form id="form-producto" novalidate>
+                    <input type="hidden" id="prod-id">
+
+                    <div class="mb-3">
+                    <label for="prod-nombre" class="form-label fw-semibold">Nombre del Arreglo <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-sm" id="prod-nombre" placeholder="Ej. Bouquet de Girasoles" required>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="prod-categoria" class="form-label fw-semibold">Categoria (separadas por coma) <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control form-control-sm" id="prod-categoria" placeholder="Ej. cinta, peluches" required>
+                    <small class="text-muted extra-small">Usar 'cinta' o 'limpiapipas' si requiere opcion de color.</small>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="prod-ocasion" class="form-label fw-semibold">Ocasion <span class="text-danger">*</span></label>
+                    <select class="form-select form-select-sm" id="prod-ocasion" required>
+                        <option value="" disabled selected>Selecciona ocasion...</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="aniversario">Aniversario</option>
+                        <option value="celebraciones">Celebraciones</option>
+                        <option value="celebraciones">Gratitud</option>
+                        <option value="celebraciones">Simpatía</option>
+                        <option value="celebraciones">Recién nacido</option>
+                    </select>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="prod-precio" class="form-label fw-semibold">Precio (S/) <span class="text-danger">*</span></label>
+                    <input type="number" step="0.50" min="1" class="form-control form-control-sm" id="prod-precio" placeholder="35.00" required>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="prod-descripcion" class="form-label fw-semibold">Descripcion <span class="text-danger">*</span></label>
+                    <textarea class="form-control form-control-sm" id="prod-descripcion" rows="2" placeholder="Breve descripcion..." required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="prod-imagen-file" class="form-label fw-semibold">Imagen del Arreglo (.jpg o .png) <span class="text-danger">*</span></label>
+                    <input 
+                        type="file" 
+                        class="form-control form-control-sm" 
+                        id="prod-imagen-file" 
+                        accept=".jpg, .jpeg, .png" 
+                        required
+                    >
+                    <div class="invalid-feedback">Selecciona una imagen válida (.jpg o .png).</div>
+                    </div>
+
+                    <div id="feedback-producto" class="mb-3 d-none"></div>
+
+                    <div class="d-flex gap-2">
+                    <button type="submit" id="btn-guardar-prod" class="btn button-color text-white btn-sm fw-bold w-100">Guardar Producto</button>
+                    <button type="button" id="btn-cancelar-prod" class="btn btn-outline-secondary btn-sm d-none">Cancelar</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+
+            <!-- Lista de inventario actual -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm p-4">
+                <h2 class="h5 fw-bold mb-3 text-secondary">Inventario actual en catalogo</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                    <thead class="table-light">
+                        <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Categoria</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody-inventario">
+                        <!-- JS renderiza los productos -->
+                    </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        </div>
+    </main>
+
+    <footer class="custom-footer py-3 mt-auto text-center extra-small">
+        <div class="container">
+        <p class="mb-0">Ritmo de Detalles &copy; 2026 - Modulo Administrativo</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    </body>
+</html>
