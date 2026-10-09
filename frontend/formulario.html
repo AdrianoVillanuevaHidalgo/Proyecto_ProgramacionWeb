@@ -26,29 +26,28 @@
     <main class="container my-4">
       <div class="row g-4">
         
-  <!-- COLUMNA IZQUIERDA: CARRITO Y RESUMEN DE LA SOLICITUD -->
+  <!-- Columna Izquierda: Carrito y resumen -->
         <section class="col-lg-5">
           <div class="card border-0 shadow-sm p-4 sticky-top" style="top: 20px;">
             <h2 class="h5 fw-bold mb-3 text-secondary">Resumen de la Solicitud</h2>
             <hr>
             
-            <!-- CONTENEDOR DINÁMICO DEL CARRITO (Aquí JS inyectará los productos elegidos) -->
+            <!-- Contenedor (Aquí entra JS) -->
             <div id="contenedor-carrito-items">
               
-              <!-- EJEMPLO DE LA ESTRUCTURA VISUAL DE 1 ELEMENTO DEL CARRITO -->
               <div class="card mb-3 border-light shadow-sm p-2">
                 <div class="row g-2 align-items-center">
                   
                   <!-- Imagen del Producto -->
                   <div class="col-3">
-                    <img src="https://via.placeholder.com/80" alt="Producto Seleccionado" class="img-fluid rounded" style="object-fit: cover; height: 70px;">
+                    <img src="" alt="Producto Seleccionado" class="img-fluid rounded" style="object-fit: cover; height: 70px;">
                   </div>
                   
                   <!-- Info basica -->
                   <div class="col-9">
                     <div class="d-flex justify-content-between align-items-start">
-                      <h3 class="h6 fw-bold mb-1 text-truncate" style="max-width: 140px;">Ramo Elegante de Rosas</h3>
-                      <span class="fw-bold text-success small">S/ 120.00</span>
+                      <h3 class="h6 fw-bold mb-1 text-truncate" style="max-width: 140px;"></h3>
+                      <span class="fw-bold text-success small">S/ 0.00</span>
                     </div>
 
                     <!-- Controles -->
@@ -83,7 +82,7 @@
             <!-- Total estimado acumulado de los productos seleccionados -->
             <div class="d-flex justify-content-between align-items-center fw-bold fs-5 mb-2">
               <span>Total:</span>
-              <span id="carrito-total-precio" class="text-success">S/ 120.00</span>
+              <span id="carrito-total-precio" class="text-success">S/ 0.00</span>
             </div>
 
             <p class="text-muted small mb-0">
@@ -92,7 +91,7 @@
           </div>
         </section>
 
-        <!-- COLUMNA DERECHA: Formulario de registro de pedido -->
+        <!-- Columna derecha: Formulario de registro de pedido -->
         <section class="col-lg-7">
           <div class="card border-0 shadow-sm p-4">
             <h2 class="h4 fw-bold mb-3 text-dark">Datos de Envio</h2>
