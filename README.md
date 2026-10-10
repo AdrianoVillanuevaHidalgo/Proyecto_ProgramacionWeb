@@ -31,7 +31,10 @@ proyecto-integrador/
 │   ├── css/
 │   │   └── styles.css
 │   ├── img/
-│   │   └── logo.jpg
+│   │   ├── logo.jpg
+│   │   ├── favicon.ico
+│   │   ├── portada.png
+│   │   └── ...
 │   └── js/
 │       └── app.js
 ├── backend/
@@ -41,6 +44,7 @@ proyecto-integrador/
 │   ├── routes/
 │   │   └── api.js
 │   ├── server.js
+│   ├── package-lock.json
 │   └── package.json
 ├── [1.6]_reflexion_curricular.pdf
 └── README.md
