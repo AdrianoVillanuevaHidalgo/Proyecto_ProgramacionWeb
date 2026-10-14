@@ -181,5 +181,13 @@ El proyecto cumple con la política de minimización de datos de la Ley de Prote
 
 ---
 
+Créditos y contribuciones
+
+Proyecto académico: Sistema web prototipo para una floristería.
+
+Desarrollo: Adriano Villanueva — desarrollo del frontend, implementación del backend con Express y lógica de gestión de datos mediante archivos JSON.
+
+Contribuciones adicionales: Gino Lupaca, Fernanda Ipushima, Karen Paucar, Octavio Solis.
+
 **Curso:** Programación Web — Universidad Privada del Norte (UPN)  
 **Año:** 2026
